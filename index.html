@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <title>Mumbble</title>
 
@@ -253,6 +256,47 @@
         }
         /*--meadia quiries end here--*/
 
+            .bubble 
+        {
+        position: relative;
+        width: 375px;
+        height: 155px;
+        padding: 2px;
+        background: #34234f;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        border-radius: 16px;
+        border: #495260 solid 2px;
+        }
+
+        .bubble:after 
+        {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 4px 13px 4px 0;
+        border-color: transparent #34234f;
+        display: block;
+        width: 0;
+        z-index: 1;
+        left: -13px;
+        top: 75px;
+        }
+
+        .bubble:before 
+        {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 5px 14px 5px 0;
+        border-color: transparent #495260;
+        display: block;
+        width: 0;
+        z-index: 0;
+        left: -16px;
+        top: 74px;
+        } 
+
                 
     
         </style>
@@ -271,16 +315,21 @@
     <div class="search">
         <i> </i>
         <div class="s-bar">
-        <form>
-            <input type="text" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Template';}">
+        <form method="get" action="resultpage.html">
+            <input type="text" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
             <input type="submit"  value="Search"/>
         </form>
         </div>
        
     </div>
 <!--search end here-->	
-        
+
    
+    <div class="bubble">
+        <p>
+            this is a bubble
+        </p>
+    </div>
       <script  src="js/index.js"></script>
     
 </body>
